@@ -88,36 +88,28 @@ public class TelaPedido extends JFrame{
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		panel.add(scrollPane);		
 		
-		JLabel labelMonth = new JLabel();
-		labelMonth.setText("Selecione o mês: ");
-		panel.add(labelMonth);
+		JLabel labelCourse1 = new JLabel();
+		labelCourse1.setText("Escolha Mês: \n");
+		panel.add(labelCourse1);
 		
-		//O componente JList é usado para exibir uma lista
-		JList<String> list = new JList<String>();
-		DefaultListModel<String> defaultListModel = new DefaultListModel<String>();
-		defaultListModel.addElement("Janeiro");
-		defaultListModel.addElement("Fevereiro");
-		defaultListModel.addElement("Março");
-		defaultListModel.addElement("Abril");
-		defaultListModel.addElement("Maio");
-		defaultListModel.addElement("Junho");
-		defaultListModel.addElement("Julho");
-		defaultListModel.addElement("Agosto");
-		defaultListModel.addElement("Setembro");
-		defaultListModel.addElement("Outubro");
-		defaultListModel.addElement("Novembro");
-		defaultListModel.addElement("Dezembro");
+		//O componente JComboBox é usado para exibir uma lista de opções para o usuário
+		JComboBox<String> courseComboBox1 = new JComboBox<String>();
+		courseComboBox1.addItem("Janeiro");
+		courseComboBox1.addItem("Fevereiro");
+		courseComboBox1.addItem("Março");
+		courseComboBox1.addItem("Abril");
+		courseComboBox1.addItem("Maio");
+		courseComboBox1.addItem("Junho");
+		courseComboBox1.addItem("Julho");
+		courseComboBox1.addItem("Agosto");
+		courseComboBox1.addItem("Setembro");
+		courseComboBox1.addItem("Outubro");
+		courseComboBox1.addItem("Novembro");
+		courseComboBox1.addItem("Dezembro");
 		
+		courseComboBox1.setPreferredSize(new Dimension(200, 30));
+		panel.add(courseComboBox1);
 		
-		list.setModel(defaultListModel);
-		list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        list.setVisibleRowCount(4);
-        list.setPreferredSize(new Dimension(490, 111));
-        
-        JScrollPane scrollPane2 = new JScrollPane(list);
-		scrollPane2.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		scrollPane2.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		panel.add(scrollPane2);
 		
 		JLabel labelCourse = new JLabel();
 		labelCourse.setText("Nº da NFe: ");
@@ -138,7 +130,7 @@ public class TelaPedido extends JFrame{
 		courseComboBox.addItem("011");
 		
 		
-		courseComboBox.setPreferredSize(new Dimension(490, 30));
+		courseComboBox.setPreferredSize(new Dimension(200, 30));
 		panel.add(courseComboBox);
 		
 			    
