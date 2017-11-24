@@ -21,6 +21,9 @@ public class TelaGerente2 extends JFrame {
 	private static final long serialVersionUID = 8463364876518097040L;
 
 	private JPanel panel = null;
+	JComboBox<String> courseComboBox;
+	
+	
 	public TelaGerente2() {
 		this.setTitle("Regitro de pedidos");
 		this.setSize(320, 150);
@@ -73,4 +76,9 @@ public class TelaGerente2 extends JFrame {
   		button2.setPreferredSize(new Dimension(150, 30));
   		panel.add(button2);
 }
+
+	public JComboBox<String> getCourseComboBox() {
+		return courseComboBox;
+	}
+	
 }

@@ -24,6 +24,11 @@ public class TelaGerente extends JFrame implements ActionListener{
 	static final long serialVersionUID = -1204293411061180422L;
 	
 	private JPanel panel = null;
+	
+	private JTextField userField ;
+	private JPasswordField senhaField ;
+
+
 
 	JButton buttonOk = new JButton("Ok");
 	JButton buttonCancel = new JButton("Cancelar");
@@ -50,14 +55,14 @@ public class TelaGerente extends JFrame implements ActionListener{
 		JLabel userLabel = new JLabel("Usuario: ");
 		panel.add(userLabel);
 		
-		JTextField userField = new JTextField();
+		userField = new JTextField();
 		userField.setColumns(20);
 		panel.add(userField);
 		
 		JLabel senhaLabel = new JLabel("Senha: ");
 		panel.add(senhaLabel);
 		
-		JPasswordField senhaField = new JPasswordField();
+		senhaField = new JPasswordField();
 		senhaField.setColumns(20);
 		panel.add(senhaField);
 		
@@ -79,8 +84,22 @@ public class TelaGerente extends JFrame implements ActionListener{
 	}
 
 	
+	
+	public JTextField getUserField() {
+		return userField;
+	}
+
+	public JPasswordField getSenhaField() {
+		return senhaField;
+	}
+
+	
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == buttonOk){
+			
+			System.out.println(userField.getText());
+			
+			
 			JOptionPane.showMessageDialog(null, "Logado com sucesso!");
 			TelaGerente2 telaGerente2 = new TelaGerente2();
 			telaGerente2.setVisible(true);

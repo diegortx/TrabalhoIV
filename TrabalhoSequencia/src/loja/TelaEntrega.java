@@ -21,11 +21,16 @@ import javax.swing.ListSelectionModel;
 import javax.swing.ScrollPaneConstants;
 
 public class TelaEntrega extends JFrame {
-	
 
 	private static final long serialVersionUID = 8463364876518097040L;
 
 	private JPanel panel = null;
+
+	JTextField textField;
+	JTextField textEmail;
+	JTextField textCpf;
+	JComboBox<String> courseComboBox;
+
 	public TelaEntrega() {
 		this.setTitle("Regitro de Entregas");
 		this.setSize(660, 360);
@@ -42,36 +47,37 @@ public class TelaEntrega extends JFrame {
 	}
 
 	private void addComponents() {
-		//O componente JLabel irá apresentar um texto na tela
+		// O componente JLabel irá apresentar um texto na tela
 		JLabel labelName = new JLabel();
 		labelName.setText("Entregador: ");
 		panel.add(labelName);
-		
-		//O componente JTextField é usado como entrada de texto
-		JTextField textField = new JTextField();
+
+		// O componente JTextField é usado como entrada de texto
+		textField = new JTextField();
 		textField.setColumns(48);
 		panel.add(textField);
-		
+
 		JLabel labelEmail = new JLabel("Matrícula:");
 		panel.add(labelEmail);
-		
-		JTextField textEmail = new JTextField();
+
+		textEmail = new JTextField();
 		textEmail.setColumns(19);
 		panel.add(textEmail);
-		
+
 		JLabel labelCpf = new JLabel("CPF:");
 		panel.add(labelCpf);
-		
-		JTextField textCpf = new JTextField();
+
+		textCpf = new JTextField();
 		textCpf.setColumns(23);
 		panel.add(textCpf);
-		
+
 		JLabel labelCourse = new JLabel();
 		labelCourse.setText("Nº da NFe entregue: ");
 		panel.add(labelCourse);
-		
-		//O componente JComboBox é usado para exibir uma lista de opções para o usuário
-		JComboBox<String> courseComboBox = new JComboBox<String>();
+
+		// O componente JComboBox é usado para exibir uma lista de opções para o
+		// usuário
+		courseComboBox = new JComboBox<String>();
 		courseComboBox.addItem("001");
 		courseComboBox.addItem("002");
 		courseComboBox.addItem("003");
@@ -83,26 +89,40 @@ public class TelaEntrega extends JFrame {
 		courseComboBox.addItem("009");
 		courseComboBox.addItem("010");
 		courseComboBox.addItem("011");
-		
-		
+
 		courseComboBox.setPreferredSize(new Dimension(490, 30));
 		panel.add(courseComboBox);
-		
-			    
-	    //O componente JButton é responsável por criar um botão
-  		JButton button = new JButton();
-  		button.setText("Registrar Entrega!");
-  		button.setPreferredSize(new Dimension(270, 30));
-  		button.addActionListener(new ActionListener() {
-			
-			
+
+		// O componente JButton é responsável por criar um botão
+		JButton button = new JButton();
+		button.setText("Registrar Entrega!");
+		button.setPreferredSize(new Dimension(270, 30));
+		button.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent arg0) {
 				JOptionPane.showMessageDialog(null, "Entrega registrada com sucesso!");
 				
+
 			}
 		});
-  		panel.add(button);
-  		
-  	}
+		panel.add(button);
+
+	}
+
+	public JTextField getTextField() {
+		return textField;
+	}
+
+	public JTextField getTextEmail() {
+		return textEmail;
+	}
+
+	public JTextField getTextCpf() {
+		return textCpf;
+	}
+
+	public JComboBox<String> getCourseComboBox() {
+		return courseComboBox;
+	}
 
 }
