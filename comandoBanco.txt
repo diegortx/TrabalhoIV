@@ -16,3 +16,6 @@ CREAT TABLE ENTREGADOR (
 	
 	
 );
+
+
+INSERT INTO ATENDENTE VALUES ('Diego', 'diego.ever@hotmail.com',10831111674,'teste,teste,teste', 'fevereiro', 001)
