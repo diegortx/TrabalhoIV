@@ -150,6 +150,7 @@ public class TelaPedido extends JFrame {
 		button.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
+
 				JOptionPane.showMessageDialog(null, "Registrado com sucesso!");
 				TelaNota telaNota = new TelaNota();
 				telaNota.setVisible(true);

@@ -46,39 +46,50 @@ public class TelaGerente2 extends JFrame {
 		panel.add(labelCourse);
 		
 		//O componente JComboBox é usado para exibir uma lista de opções para o usuário
-		JComboBox<String> courseComboBox = new JComboBox<String>();
-		courseComboBox.addItem("001");
-		courseComboBox.addItem("002");
-		courseComboBox.addItem("003");
-		courseComboBox.addItem("004");
-		courseComboBox.addItem("005");
-		courseComboBox.addItem("006");
-		courseComboBox.addItem("007");
-		courseComboBox.addItem("008");
-		courseComboBox.addItem("009");
-		courseComboBox.addItem("010");
-		courseComboBox.addItem("011");
+		courseComboBox = new JComboBox<String>();
+		courseComboBox.addItem("1");
+		courseComboBox.addItem("2");
+		courseComboBox.addItem("3");
+		courseComboBox.addItem("4");
+		courseComboBox.addItem("5");
+		courseComboBox.addItem("6");
+		courseComboBox.addItem("7");
+		courseComboBox.addItem("8");
+		courseComboBox.addItem("9");
+		courseComboBox.addItem("10");
+		courseComboBox.addItem("11");
 		
 		
 		courseComboBox.setPreferredSize(new Dimension(200, 30));
 		panel.add(courseComboBox);
+		
+		
+		
 		
 		JButton button2 = new JButton();
 		button2.addActionListener(new ActionListener() {
 			
 			
 			public void actionPerformed(ActionEvent arg0) {
-				JOptionPane.showMessageDialog(null, "Relatório gerado com sucesso!");
+				JOptionPane.showMessageDialog(null, "Relatório gerado com sucesso NUMERO :  " + (getCourseComboBox().getSelectedIndex()+1) );
+				
+				
 				
 			}
 		});
-  		button2.setText("Emitir Relatório !");
+  		
+		
+		button2.setText("Emitir Relatório !");
   		button2.setPreferredSize(new Dimension(150, 30));
   		panel.add(button2);
+  		
 }
-
 	public JComboBox<String> getCourseComboBox() {
 		return courseComboBox;
 	}
+
+
+	
+	
 	
 }

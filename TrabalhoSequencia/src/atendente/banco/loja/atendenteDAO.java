@@ -1,4 +1,4 @@
-package banco.loja;
+package atendente.banco.loja;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

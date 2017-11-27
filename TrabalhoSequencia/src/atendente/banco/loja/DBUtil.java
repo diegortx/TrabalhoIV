@@ -1,4 +1,4 @@
-package banco.loja;
+package atendente.banco.loja;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +10,7 @@ public class DBUtil {
 		try {
 			Class.forName("org.postgresql.Driver");
 
-			String url = "jdbc:postgresql://localhost:5432/postgres";
+			String url = "jdbc:postgresql://localhost:5432/Loja";
 			String username = "postgres";
 			String password = "4004500";
 
