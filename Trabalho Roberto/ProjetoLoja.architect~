@@ -502,16 +502,16 @@
   <table id="TAB138" populated="true" UUID="bfbc7a9a-247d-4599-9d3c-5963a3652e9c" name="atendente" objectType="TABLE" physicalName="atendente" >
    <remarks></remarks>
    <folder id="FOLTAB1381" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL139" populated="true" UUID="24a1a2d3-8840-47cd-9041-23771910d38f" autoIncrement="true" autoIncrementSequenceName="atendente_cpf_seq" defaultValue="" name="cpf" nullable="0" physicalName="cpf" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL139" populated="true" UUID="4499c25e-3a8c-4afc-8552-69d183d561fa" autoIncrement="true" autoIncrementSequenceName="atendente_nome_seq" defaultValue="" name="nome" nullable="0" physicalName="nome" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL140" populated="true" UUID="4499c25e-3a8c-4afc-8552-69d183d561fa" autoIncrement="true" autoIncrementSequenceName="atendente_nome_seq" defaultValue="" name="nome" nullable="0" physicalName="nome" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL140" populated="true" UUID="0ac1165e-2970-42ea-a636-8e48c16f6a33" autoIncrement="true" autoIncrementSequenceName="atendente_notaFiscal_seq" defaultValue="" name="notaFiscal" nullable="0" physicalName="notaFiscal" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks></remarks>
     </column>
-    <column id="COL141" populated="true" UUID="0ac1165e-2970-42ea-a636-8e48c16f6a33" autoIncrement="true" autoIncrementSequenceName="atendente_notaFiscal_seq" defaultValue="" name="notaFiscal" nullable="0" physicalName="notaFiscal" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL141" populated="true" UUID="920ab080-d9d4-44cd-95c9-df8bc6d35078" autoIncrement="true" autoIncrementSequenceName="atendente_email_seq" defaultValue="" name="email" nullable="0" physicalName="email" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL142" populated="true" UUID="920ab080-d9d4-44cd-95c9-df8bc6d35078" autoIncrement="true" autoIncrementSequenceName="atendente_email_seq" defaultValue="" name="email" nullable="0" physicalName="email" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL142" populated="true" UUID="24a1a2d3-8840-47cd-9041-23771910d38f" autoIncrement="true" autoIncrementSequenceName="atendente_cpf_seq" defaultValue="" name="cpf" nullable="0" physicalName="cpf" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks></remarks>
     </column>
     <column id="COL143" populated="true" UUID="603319fc-2622-466c-95c9-0c582e571174" autoIncrement="true" autoIncrementSequenceName="atendente_produtos_seq" defaultValue="" name="produtos" nullable="0" physicalName="produtos" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -527,7 +527,7 @@
     </folder>
     <folder id="FOLTAB1384" populated="true" name="Indices" physicalName="Indices" type="4">
     <index id="IDX145" populated="true" UUID="534b5733-180b-4e82-b829-56c27c0f5b59" clustered="false" name="atendente_pk" physicalName="atendente_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC146" populated="true" UUID="24b9c737-ab49-4abd-8bea-8f0a889e679f" ascendingOrDescending="UNSPECIFIED" column-ref="COL139" name="cpf" physicalName="cpf" />
+     <index-column id="IDC146" populated="true" UUID="8537aaa8-5f5b-47a4-b5fe-f3343f9d0751" ascendingOrDescending="UNSPECIFIED" column-ref="COL139" name="nome" physicalName="nome" />
     </index>
    </folder>
   </table>
@@ -565,7 +565,7 @@
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB138" x="163" y="63" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB147" x="643" y="102" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB147" x="638" y="72" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
